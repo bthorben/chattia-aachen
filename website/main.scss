@@ -22,11 +22,11 @@ body > .container {
   	background-repeat: no-repeat;
   	background-size: cover;
 	color: white;
-}
 
-.chattia h1 {
-	color: hsl(0, 97%, 33%);
-	text-shadow: 0px 0px 2px white;
+ 	h1 {
+		color: hsl(0, 97%, 33%);
+		text-shadow: 0px 0px 2px white;
+	}
 }
 
 .chattia p {
@@ -52,11 +52,19 @@ h1 {
 .row.red {
 	background-color: hsl(0, 97%, 25%);
   	color: hsl(0, 0%, 80%);
+
+  	h1 small {
+		color: hsl(0, 0%, 70%);
+	}
 }
 
 .row.gold {
 	background-color: hsl(47, 93%, 60%);
   	color: hsl(0, 0%, 20%);
+
+  	h1 small {
+		color: hsl(0, 0%, 35%);
+	}
 }
 
 footer {
