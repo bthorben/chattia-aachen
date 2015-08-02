@@ -1,0 +1,60 @@
+// Overwrites
+$navbar-default-color: white;
+$navbar-default-bg: hsla(0, 0%, 0%, 0.6);
+$navbar-default-border: 0;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: darken($navbar-default-link-color, 10%);
+$navbar-default-link-hover-bg: transparent;
+$navbar-default-link-active-color: darken($navbar-default-link-color, 10%);
+$navbar-default-link-active-bg: transparent;
+
+// Core variables and mixins
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap/";
+
+// Custom SCSS
+body > .container {
+	margin-top: 71px;
+}
+
+.chattia {
+	background: url('assets/dom.jpg');
+	background-position: center center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	color: white;
+}
+
+.chattia h1 {
+	color: hsl(0, 97%, 33%);
+	text-shadow: 0px 0px 2px white;
+}
+
+.chattia p {
+	font-size: 30px;
+}
+
+h1 {
+	padding-left: 15px;
+}
+
+.row {
+	padding: 0px 10px;
+  	margin-left: 0;
+  	margin-right: 0;
+  	margin-bottom: 2em;
+}
+
+.row.red, .row.gold {
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.row.red {
+	background-color: hsl(0, 97%, 25%);
+  	color: hsl(0, 0%, 80%);
+}
+
+.row.gold {
+	background-color: hsl(47, 93%, 60%);
+  	color: hsl(0, 0%, 20%);
+}
