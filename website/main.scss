@@ -33,15 +33,15 @@ body > .container {
 	font-size: 30px;
 }
 
-h1 {
-	padding-left: 15px;
-}
-
 .row {
 	padding: 0px 10px;
   	margin-left: 0;
   	margin-right: 0;
   	margin-bottom: 2em;
+
+  	h1 {
+		padding-left: 15px;
+	}
 }
 
 .row.red, .row.gold {
@@ -54,7 +54,7 @@ h1 {
   	color: hsl(0, 0%, 80%);
 
   	h1 small {
-		color: hsl(0, 0%, 70%);
+		color: hsl(0, 0%, 60%);
 	}
 }
 
