@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       },
       js_frontend: {
         src: [
-          './bower_components/jquery/jquery.js',
+          './bower_components/jquery/dist/jquery.js',
           './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
           './website/main.js'
         ],
