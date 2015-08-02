@@ -1,9 +1,0 @@
-{
-  "name": "chattia_aachen",
-  "description": "Chattia zu Aachen Website",
-  "version": "1.0.0",
-  "dependencies": {
-    "bootstrap-sass-official": "~3.3.5",
-    "bootstrap": "~3.3.5"
-  }
-}
