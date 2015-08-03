@@ -22,9 +22,10 @@ module.exports = function(grunt) {
       html: {
         expand: true,
         cwd: 'website',
-        src: '*.html',
+        src: ['**/*.html', '**/*.ht*'],
         dest: 'public/',
-        flatten: true,
+        filter: 'isFile',
+        dot: true
       },
       assets: {
         expand: true,
@@ -70,7 +71,7 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['website/*'],
+        files: ['website/**'],
         tasks: ['init'],
         options: {
           spawn: false,

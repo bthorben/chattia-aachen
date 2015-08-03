@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Service-Bereich"
+AuthUserFile /public_html/bootstrap/intern/.htusers
+Require user aktivitas
