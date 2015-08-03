@@ -67,6 +67,15 @@ module.exports = function(grunt) {
           './public/main.js': './public/main.js'
         }
       }
+    },
+    watch: {
+      scripts: {
+        files: ['website/*'],
+        tasks: ['init'],
+        options: {
+          spawn: false,
+        },
+      },
     }
   });
 
@@ -75,6 +84,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Task definition
   grunt.registerTask('init', ['copy', 'sass', 'concat', 'uglify']);
