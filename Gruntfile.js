@@ -11,6 +11,14 @@ module.exports = function(grunt) {
         flatten: true,
         filter: 'isFile',
       },
+      font_awesome: {
+        expand: true,
+        cwd: 'bower_components/components-font-awesome/fonts',
+        src: '**',
+        dest: 'public/fonts/',
+        flatten: true,
+        filter: 'isFile',
+      },
       html: {
         expand: true,
         cwd: 'website',

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "dependencies": {
     "bootstrap-sass-official": "~3.3.5",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "components-font-awesome": "~4.4.0"
   }
 }

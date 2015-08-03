@@ -7,9 +7,14 @@ $navbar-default-link-hover-color: darken($navbar-default-link-color, 10%);
 $navbar-default-link-hover-bg: transparent;
 $navbar-default-link-active-color: darken($navbar-default-link-color, 10%);
 $navbar-default-link-active-bg: transparent;
+$icon-font-path: "fonts/";
 
-// Core variables and mixins
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap/";
+
+$fa-font-path: "fonts/";
+
+@import "../bower_components/components-font-awesome/scss/font-awesome.scss";
+
 
 // Custom SCSS
 body > .container {
@@ -41,6 +46,16 @@ body > .container {
 
   	h1 {
 		padding-left: 15px;
+		text-align: center;
+
+	}
+}
+
+@media (max-width: 767px) {
+	.row {
+		h1 {
+			text-align: left;
+		}
 	}
 }
 
@@ -64,6 +79,16 @@ body > .container {
 
   	h1 small {
 		color: hsl(0, 0%, 35%);
+	}
+}
+
+.anfahrt {
+	padding: 0 20% 0 0px;
+}
+
+@media (max-width: 767px) {
+	.anfahrt {
+		padding: 0;
 	}
 }
 
