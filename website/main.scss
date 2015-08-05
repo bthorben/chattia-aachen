@@ -30,6 +30,12 @@ body > .container {
 	margin-bottom: 30px;
 	text-align: center;
 }
+.container .jumbotron .semesterprogramm {
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: right;
+
+}
 
 .chattia {
 	background: url('assets/dom.jpg');
@@ -95,15 +101,25 @@ body > .container {
 		color: hsl(0, 0%, 20%);
 	}
 }
+.col-centered{
+
+		h2 {
+		text-align: center;
+	}
+}
 
 .anfahrt {
-	padding: 0 20% 0 0px;
+	padding: 0 0% 0 0px;
+	
 }
+
 .wartburg {
-	padding-top: 10px
+	padding-top: 10px;
 }	
 
-
+.chattenheim{
+	padding-bottom: 10px;
+}
 @media (max-width: 767px) {
 	.anfahrt {
 		padding: 0;
