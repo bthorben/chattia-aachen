@@ -57,9 +57,11 @@ body > .container {
   	margin-bottom: 2em;
 
   	h1 {
-		padding-left: 15px;
+		padding-left: 0px;
 		text-align: center;
-
+}
+	h1 small {
+		color: hsl(0,0,0%);
 	}
 }
 
@@ -81,7 +83,7 @@ body > .container {
   	color: hsl(0, 0%, 80%);
 
   	h1 small {
-		color: hsl(0, 0%, 60%);
+		color: hsl(0, 0%, 80%);
 	}
 }
 
@@ -90,13 +92,17 @@ body > .container {
   	color: hsl(0, 0%, 20%);
 
   	h1 small {
-		color: hsl(0, 0%, 35%);
+		color: hsl(0, 0%, 20%);
 	}
 }
 
 .anfahrt {
 	padding: 0 20% 0 0px;
 }
+.wartburg {
+	padding-top: 10px
+}	
+
 
 @media (max-width: 767px) {
 	.anfahrt {
