@@ -20,11 +20,11 @@ $fa-font-path: "fonts/";
 // Custom SCSS
 body > .container {
 	background-color: white;
-	padding: 0 30px;
+	padding: 0 0px;
 }
 
 .container .jumbotron {
-	margin: 0 -30px;
+	margin: 0 -0px;
 	padding-top: 100px;
 	border-radius: 0;
 	margin-bottom: 30px;
@@ -60,7 +60,7 @@ body > .container {
 	padding: 0px 10px;
   	margin-left: 0;
   	margin-right: 0;
-  	margin-bottom: 2em;
+  	margin-bottom: 1em;
 
   	h1 {
 		padding-left: 0px;
@@ -109,7 +109,7 @@ body > .container {
 }
 
 .anfahrt {
-	padding: 0 0% 0 0px;
+	padding: 5% 5% 5% 5%;
 	
 }
 
@@ -120,12 +120,24 @@ body > .container {
 .chattenheim{
 	padding-bottom: 10px;
 }
+
+.carousel{
+	margin:	0 -40px;
+}
 @media (max-width: 767px) {
 	.anfahrt {
-		padding: 0;
+		padding: 0%;
+	}
+}
+.col-centered{
+		h2 {
+		text-align: center;
 	}
 }
 
+.well-sm{
+	text-align: left;
+}
 footer {
 	padding: 20px 0;
 	color: white;
