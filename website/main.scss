@@ -18,7 +18,6 @@ $fa-font-path: "fonts/";
 
 
 // Custom SCSS
-
 body > .container {
 	background-color: white;
 	padding: 0 0px;
@@ -28,7 +27,7 @@ body > .container {
 	margin: 0 -0px;
 	padding-top: 100px;
 	border-radius: 0;
-	margin-bottom: 0px;
+	margin-bottom: 30px;
 	text-align: center;
 }
 .container .jumbotron .semesterprogramm {
@@ -115,11 +114,10 @@ body > .container {
 }
 
 .wartburg {
-	padding-top: 25px;
+	padding-top: 10px;
 }	
 
 .chattenheim{
-	padding-top: 5px;
 	padding-bottom: 10px;
 }
 
@@ -145,6 +143,4 @@ footer {
 	color: white;
 	background-color: hsl(0, 0%, 40%);
 	text-align: center;
-	font-size: 100%
-
 }
