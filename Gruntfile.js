@@ -34,6 +34,12 @@ module.exports = function(grunt) {
         dest: 'public/assets',
         flatten: true,
         filter: 'isFile',
+      },
+      files: {
+        expand: true,
+        cwd: 'website',
+        src: ['**/files/**', '**/img/**'],
+        dest: 'public/',
       }
     },
     sass: {

@@ -1,0 +1,14 @@
+SSLRequireSSL
+ErrorDocument 403 https://www.wingolf-aachen.de/bootstrap/intern/index.html
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
+AuthType Basic
+AuthName "Bitte Zugangsdaten eingeben:"
+AuthUserFile /usr/www/users/wingoc/bootstrap/usr/.htpasswd
+AuthGroupFile /dev/null
+
+order deny,allow
+require user Aktivitas
