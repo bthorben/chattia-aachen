@@ -60,4 +60,12 @@
   width: auto;
 }
 
+@font-face{ 
+	font-family: 'WebSymbols-Regular';
+	src: url('../fonts/WebSymbols-Regular.otf');
+  src: url('../fonts/WebSymbols-Regular?#iefix') format('embedded-opentype'),
+	     url('../fonts/WebSymbols-Regular.woff') format('woff'),
+	     url('../fonts/WebSymbols-Regular.ttf') format('truetype'),
+	     url('../fonts/WebSymbols-Regular.svg#webfont') format('svg');
+}
 

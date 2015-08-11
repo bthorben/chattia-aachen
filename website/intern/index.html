@@ -68,7 +68,18 @@
           <p>
           <?php
           $ordner = "img/Wartburgfest15";
-          $allebilder = scandir($ordner);
+          
+          if(!is_dir($ordner)) {
+            echo "Kein Ordner für Bilder angegeben.";
+            return;
+          }
+          $dh = opendir($ordner);
+          while (false !== ($filename = readdir($dh))) {
+            $files[] = $filename;
+          }
+          sort($files);
+          
+          $allebilder = $files;   
           
           foreach($allebilder as $bild) {
             $bildinfo = pathinfo($ordner."/".$bild);

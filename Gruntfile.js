@@ -40,6 +40,13 @@ module.exports = function(grunt) {
         cwd: 'website',
         src: ['**/files/**', '**/img/**'],
         dest: 'public/',
+      },
+      fonts: {
+        expand: true,
+        cwd: 'fonts',
+        src: ['website/fonts/*'],
+        dest: 'public/fonts/',
+        filter: 'isFile',
       }
     },
     sass: {
