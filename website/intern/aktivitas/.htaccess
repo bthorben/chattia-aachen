@@ -1,6 +1,8 @@
 SSLRequireSSL
 ErrorDocument 403 https://www.wingolf-aachen.de/bootstrap/intern/index.html
 
+AddType application/x-httpd-php php php4 php3 html htm
+
 <Files ~ "^\.(htaccess|htpasswd)$">
 deny from all
 </Files>

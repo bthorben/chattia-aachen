@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="main.css" rel="stylesheet">
     <script src="main.js"></script>
+    <?php include_once('calendar.php'); ?>
     <title>Wingolfsverbindung Chattia zu Aachen</title>
   </head>
   <body>
@@ -51,6 +52,8 @@
         <h1>Übersicht</h2>
         <div class="col-md-4 col-centered">
           <h2>Termine:</h2>
+          <?php returnCalendarDates("/assets/SemesterprogrammWS1516.ics", 3); ?>
+          <!--
           <div class="well well-sm">
             Jour Fixe
             Do, 30. April 2015 - 19:15</br>
@@ -66,12 +69,13 @@
             Do, 30. April 2015 - 19:15</br>
             Ort: Chattenheim
           </div>
+          -->
           <br>
           <br>
           <h4>Das gesamte Programm als .pdf:</h4>
-          <p><a class="btn btn-primary btn-lg btn-block" href="#" role="button">Semesterprogramm.pdf</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="/assets/SemesterprogrammWS1516.pdf" role="button">Semesterprogramm.pdf</a></p>
           <h4>Das gesamte Programm als .ics:</h4>
-          <p><a class="btn btn-primary btn-lg btn-block" href="#" role="button">Semesterprogramm.ics</a></p>
+          <p><a class="btn btn-primary btn-lg btn-block" href="/assets/SemesterprogrammWS1516.ics" role="button">Semesterprogramm.ics</a></p>
         </div>
         <div class="col-md-4 col-centered">
           <p><h3>Anschrift Chattenheim:</h3>

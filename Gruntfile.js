@@ -19,10 +19,10 @@ module.exports = function(grunt) {
         flatten: true,
         filter: 'isFile',
       },
-      html: {
+      html_php: {
         expand: true,
         cwd: 'website',
-        src: ['**/*.html', '**/*.ht*'],
+        src: ['**/*.html', '**/*.ht*', '**/*.php'],
         dest: 'public/',
         filter: 'isFile',
         dot: true
