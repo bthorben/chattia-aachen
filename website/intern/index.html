@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../files/glisseApp.css" />
+    <link rel="stylesheet" href="../files/glisse.css" />
+    
+    
+    <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script> 
     <script src="../main.js"></script>
+    <script src="../files/showBereich.js"></script>
+    <script src="../files/glisse.js"></script>
+    
+    <?php include("readNews.php") ?>
+    <?php include("thumbnail.php") ?>
+    
     <title>Wingolfsverbindung Chattia zu Aachen</title>
   </head>
   <body>
@@ -49,33 +60,37 @@
         <a name="start"></a>
         <h1>Übersicht</h2>
         <div class="col-md-4 col-centered">
-          <h2>Termine:</h2>
-          <div class="well well-sm">
-            Jour Fixe
-            Do, 30. April 2015 - 19:15</br>
-            Ort: Chattenheim
-          </div>
-          <div class="well well-sm">
-            Jour Fixe
-            Do, 30. April 2015 - 19:15</br>
-            Ort: Chattenheim
-          </div>
-          <div class="well well-sm">
-            Jour Fixe
-            Do, 30. April 2015 - 19:15</br>
-            Ort: Chattenheim
-          </div>
-          <br>
-          <br>
-          <h4>Das gesamte Programm als .pdf:</h4>
-          <p><a class="btn btn-primary btn-lg btn-block" href="#" role="button">Semesterprogramm.pdf</a></p>
-          <h4>Das gesamte Programm als .ics:</h4>
-          <p><a class="btn btn-primary btn-lg btn-block" href="#" role="button">Semesterprogramm.ics</a></p>
+          <h2>News:</h2>
+          <?php showNews("files/SemesterberichtSS15.txt"); ?>
+          <?php showNews("files/AnkneipeSS15.txt"); ?>
         </div>
         <div class="col-md-4 col-centered">
-          <p><h3>Anschrift Chattenheim:</h3>
-            Wirichsbongardstraße 27</br>
-          52062 Aachen, Deutschland</br></p>
+          <p>
+          <?php
+          $ordner = "img/Wartburgfest15";
+          $allebilder = scandir($ordner);
+          
+          foreach($allebilder as $bild) {
+            $bildinfo = pathinfo($ordner."/".$bild);
+            $string = explode('.', $bildinfo['basename']); 
+            $endung = $string[count($string)-1];
+            if($endung == "JPG" || $endung == "PNG") {
+              make_thumbnail($bildinfo['dirname']."/".$bildinfo['basename'], "img/_thumbnail/".$bildinfo['basename']);
+              ?>
+              <img class="galerie_pics" src="<?php echo "img/_thumbnail/".$bildinfo['basename'];?>" data-glisse-big="<?php echo $bildinfo['dirname']."/".$bildinfo['basename'];?>" rel="group2"/>
+              <?php
+            }
+          }
+        
+        ?>
+        
+        <script>
+            $(function () {
+                
+                $('.galerie_pics').glisse({speed: 500, changeSpeed: 550, effect:'bounce', fullscreen: false}); 
+            });
+        </script>
+        </p>
         </div>
         <div class="col-md-4 col-centered">
           <p><h3>mit dem Bus:</h3>

@@ -1,0 +1,63 @@
+.photos{cursor:pointer;}
+
+/* Glisse: Overlay */
+#glisse-overlay {
+  background: rgba(0,0,0.3);
+  
+  }
+
+#glisse-close {
+  font-family: WebSymbols-Regular;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  position: fixed;
+  top:40px;
+  right:40px;
+  !background:red;}
+
+
+
+/* Prev/Next button */
+.glisse-next a, .glisse-prev a {
+  background:black;
+  width: 20px;
+  height: 40px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  font-size: 20px;
+  font-family: WebSymbols-Regular;
+  line-height: 40px;
+  color: #DFDFDF;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.8px #000;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), color-stop(100%, white), to(#dfdfdf)); }
+
+.glisse-next a {
+
+  left: 50%;
+  margin-left: 20px; }
+
+.glisse-prev a {
+  left: 50%;
+  margin-left: -40px; }
+
+/* Legend */
+.glisse-legend {
+  position:fixed;
+  display:block;
+  bottom:10px;
+  left:10px;
+  color:white;
+  background:blue; }
+  
+ .galeriepics {
+  height: 4em;
+  width: auto;
+}
+
+
