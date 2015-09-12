@@ -14,8 +14,9 @@
     <script src="../files/showBereich.js"></script>
     <script src="../files/glisse.js"></script>
     
-    <?php include("readNews.php") ?>
-    <?php include("thumbnail.php") ?>
+    <?php include_once("readNews.php") ?>
+    <?php include_once("thumbnail.php") ?>
+    <?php include_once("readPicFolder.php") ?>
     
     <title>Wingolfsverbindung Chattia zu Aachen</title>
   </head>
@@ -58,76 +59,36 @@
       </div>
       <div class="row">
         <a name="start"></a>
-        <h1>Übersicht</h2>
-        <div class="col-md-6 col-centered">
-          <h2>Weißer Bereich</h2>
-          
-        </div>
-        <div class="col-md-6 col-centered">
-          
-        </div>
-        </div>
-        <div class="row-gold">
+      </div>
+        <div class="row">
           <a name="news"></a>
+          <div class="col-md-12 col-centered">
           <h1>Neues aus der Chattia</h1>
-          <p>Hier stehen die News! </br>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. 
-          <?php showNews("files/SemesterberichtSS15.txt"); ?>
-          <?php showNews("files/AnkneipeSS15.txt"); ?>
+          <p class="text-justify">
+           <?php showNews("files/Semesterbericht SoSe 15.txt"); ?>
+           <?php showNews("files/Ankneipe SoSe 15.txt"); ?>
+           <?php showNews("files/Operation Polystyrol.txt"); ?>
+           <?php showNews("files/74. Wingolfsseminar.txt"); ?>
+           <?php showNews("files/Fuxenvorstellung Dennis.txt"); ?>
+           <?php showNews("files/Semesterbericht WiSe 14 15.txt"); ?>
+           <?php showNews("files/Fuxenvorstellung Simon.txt"); ?>
+           <?php showNews("files/Fuxenvorstellung Fabian.txt"); ?>
+           <?php showNews("files/Fuxenvorstellung Patrick.txt"); ?>
           </p>
         </div>
+        </div>
         
-        <div class="row-red">
+        <div class="row red">
           <a name="galerie"></a>
+          <div class="col-md-12 col-centered">
           <h1>Galerie</h1>
-          <p>Hier sieht man die Bilder! </br>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-
-Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. 
           <p>
-          <?php
-          $ordner = "img/Wartburgfest15";
-          
-          if(!is_dir($ordner)) {
-            echo "Kein Ordner für Bilder angegeben.";
-            return;
-          }
-          $dh = opendir($ordner);
-          while (false !== ($filename = readdir($dh))) {
-            $files[] = $filename;
-          }
-          sort($files);
-          
-          $allebilder = $files;   
-          
-          foreach($allebilder as $bild) {
-            $bildinfo = pathinfo($ordner."/".$bild);
-            $string = explode('.', $bildinfo['basename']); 
-            $endung = $string[count($string)-1];
-            if($endung == "JPG" || $endung == "PNG") {
-              make_thumbnail($bildinfo['dirname']."/".$bildinfo['basename'], "img/_thumbnail/".$bildinfo['basename']);
-              ?>
-              <img class="galerie_pics" src="<?php echo "img/_thumbnail/".$bildinfo['basename'];?>" data-glisse-big="<?php echo $bildinfo['dirname']."/".$bildinfo['basename'];?>" rel="group2"/>
-              <?php
-            }
-          }
+          <?php readPicFolder("img/Wartburgfest 2015"); ?>
+          <?php readPicFolder("img/Ankneipe SoSe 15"); ?>
+          <?php readPicFolder("img/Hausbautag"); ?>
         
-        ?>
         
+        <!-- Skript muss einmal eingebunden werden, damit Bildergalerie gestartet wird -->       
         <script>
             $(function () {
                 
@@ -135,15 +96,16 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
             });
         </script>
         </p>
-          </p>
+        </div>
+        </div>
         </div>
         
     <footer role="contentinfo">
-      <div class="container">
-        Copyright Chattia zu Aachen. <br>
-        Design und Layout Steffen Bochenek und Thorben Bochenek.<br>
-        Unter Verwendung von Bootstrap, Grunt, Bower und mit einem Bild von Matthias Ripp.
-      </div>
-    </footer>
+        <div class="container">
+          Copyright Chattia zu Aachen. <br>
+          Design, Layout und Funktionen Johannes Kästle, Steffen Bochenek und Thorben Bochenek.<br>
+          Unter Verwendung von Bootstrap, Grunt, Bower und mit einem Bild von Matthias Ripp.
+        </div>
+      </footer>
   </body>
 </html>

@@ -40,20 +40,19 @@ function showNews($filepath) {
   $header = basename($filepath);
   $header = substr($header, 0, -4);
   
-  echo "<section>
-        <header>
-          <h3>".$header."</h3>
-        </header>
-        <p id=\"readMoreButton".$a."\">     
+  echo "<div class=\"row gold\">
+        <a name=\"".$header."\"></a>
+        <h2>".$header."</h2>
+        <p class=\"text-justify\" id=\"readMoreButton".$a."\">     
           ".inputThumbnailText($filepath)."       
-        <a href=\"#\" onclick=\"readMore('#readMoreButton".$a."', '#more".$a."');\">Read More</a>
+        <a href=\"#".$header."\" onclick=\"readMore('#readMoreButton".$a."', '#more".$a."');\">Read More</a>
         </p>
-        <p id=\"more".$a."\">
+        <p class=\"text-justify\" id=\"more".$a."\">
           <script>ausblendenWithoutAnimation('#more".$a."');</script>
           ".inputWholeText($filepath)."
-          <a href=\"#\" onclick=\"readMore('#more".$a."', '#readMoreButton".$a."');\">Read Less</a>
+          <a href=\"#".$header."\" onclick=\"readMore('#more".$a."', '#readMoreButton".$a."');\">Read Less</a>
         </p>
-      </section>";
+      </div>";
       
   $a++;
 }
