@@ -7,6 +7,7 @@
     global $b;
     $ordner = $folderpath;
     
+    echo "<div class=\"row tan\">";    
     echo "<h2>".basename($ordner)."</h2>";
     
     //Check if Path is a Folder
@@ -25,6 +26,7 @@
           
     $allebilder = $files;  
    
+
     foreach($allebilder as $bild) {
       $bildinfo = pathinfo($ordner."/".$bild);
       $string = explode('.', $bildinfo['basename']); 
@@ -38,7 +40,8 @@
         echo "<img class=\"galerie_pics\" src=\"".$thumbnailpath."\" data-glisse-big=\"".$picpath."\" rel=\"group".$b."\"/>";
       }
     }
-   
+    echo "</br></br>";
+    echo "</div>";
     closedir($dh);
     $b++;
   }
