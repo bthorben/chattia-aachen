@@ -16,7 +16,14 @@ $fa-font-path: "fonts/";
 
 @import "../bower_components/components-font-awesome/scss/font-awesome.scss";
 
+@font-face {
+  font-family: 'criscross';
+  src: url("fonts/criscross.ttf");
+}
 
+.criscross{
+	font-family: criscross;
+}
 // Custom SCSS
 body > .container {
 	background-color: white;
@@ -103,6 +110,10 @@ body > .container {
   	h1 small {
 		color: hsl(0, 0%, 20%);
 	}
+}
+.row.beige{
+	background-color: hsl(60,56%,91%);
+  	color: hsl(0, 0%, 10%);
 }
 .col-centered{
 

@@ -40,7 +40,7 @@ function showNews($filepath) {
   $header = basename($filepath);
   $header = substr($header, 0, -4);
   
-  echo "<div class=\"row gold\">
+  echo "<div class=\"row beige\">
         <a name=\"".$header."\"></a>
         <h2>".$header."</h2>
         <p class=\"text-justify\" id=\"readMoreButton".$a."\">     
