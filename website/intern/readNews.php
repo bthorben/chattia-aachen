@@ -45,12 +45,12 @@ function showNews($filepath) {
         <h2>".$header."</h2>
         <p class=\"text-justify\" id=\"readMoreButton".$a."\">     
           ".inputThumbnailText($filepath)."       
-        <a href=\"#".$header."\" onclick=\"readMore('#readMoreButton".$a."', '#more".$a."');\">Read More</a>
+        <a href=\"#".$header."\" onclick=\"readMore('#readMoreButton".$a."', '#more".$a."');\">Weiterlesen...</a>
         </p>
         <p class=\"text-justify\" id=\"more".$a."\">
           <script>ausblendenWithoutAnimation('#more".$a."');</script>
           ".inputWholeText($filepath)."
-          <a href=\"#".$header."\" onclick=\"readMore('#more".$a."', '#readMoreButton".$a."');\">Read Less</a>
+          <a href=\"#".$header."\" onclick=\"readMore('#more".$a."', '#readMoreButton".$a."');\">weniger zeigen ...</a>
         </p>
       </div>";
       
