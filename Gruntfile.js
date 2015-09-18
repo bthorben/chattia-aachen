@@ -41,11 +41,12 @@ module.exports = function(grunt) {
         src: ['**/files/**', '**/img/**'],
         dest: 'public/',
       },
-      fonts: {
+      customFonts: {
         expand: true,
-        cwd: 'fonts',
-        src: ['website/fonts/*'],
+        cwd: 'website/fonts',
+        src: '**',
         dest: 'public/fonts/',
+        flatten: true,
         filter: 'isFile',
       }
     },
