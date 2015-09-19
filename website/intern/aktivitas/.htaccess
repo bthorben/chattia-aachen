@@ -1,5 +1,5 @@
 SSLRequireSSL
-ErrorDocument 403 https://www.wingolf-aachen.de/bootstrap/intern/index.html
+ErrorDocument 403 https://www.wingolf-aachen.de/intern/aktivitas/index.html
 
 AddType application/x-httpd-php php php4 php3 html htm
 
@@ -9,7 +9,7 @@ deny from all
 
 AuthType Basic
 AuthName "Bitte Zugangsdaten eingeben:"
-AuthUserFile /usr/www/users/wingoc/bootstrap/usr/.htpasswd
+AuthUserFile /usr/www/users/wingoc/usr/.htpasswd
 AuthGroupFile /dev/null
 
 order deny,allow
