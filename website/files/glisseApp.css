@@ -53,8 +53,11 @@
   bottom:10px;
   left:10px;
   color:white;
-  background:blue; }
-  
+  background:black; 
+  font-size: 1.5em; }
+
+
+/* Custom Changes */  
  .galerie_pics {
   height: 8em;
   width: auto;

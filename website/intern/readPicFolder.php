@@ -36,8 +36,11 @@
         
         $thumbnailpath = "img/_thumbnail/".$bildinfo['basename'];
         $picpath = $bildinfo['dirname']."/".$bildinfo['basename'];
+        
+        $picname = $bildinfo['basename'];
+        $picname = substr($picname, 0, -4);
       
-        echo "<img class=\"galerie_pics\" src=\"".$thumbnailpath."\" data-glisse-big=\"".$picpath."\" rel=\"group".$b."\"/>";
+        echo "<img class=\"galerie_pics\" src=\"".$thumbnailpath."\" data-glisse-big=\"".$picpath."\" rel=\"group".$b."\" title=\"".$picname."\"/>";
       }
     }
     echo "</br></br>";
