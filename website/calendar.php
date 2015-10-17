@@ -84,17 +84,19 @@
           $month = str_pad($date["mon"], 2, '0', STR_PAD_LEFT);
           $day = str_pad($date["mday"], 2, '0', STR_PAD_LEFT);
           
-          $convertedDate = $date["year"].$month.$day;
-          
-          //$convertedDate = "20150430";
-          
-          if($starttime > $convertedDate) {
+          $convertedDate = $date["year"].$month.$day;         
+                    
+          if($endtime > $convertedDate) {
 
             
             
             
             if($wholeday == 1) { //Ganztägiges Ereignis
               $starttimeAnzeige = date('D, j. F Y', mktime(0, 0, 0, substr($starttime, 4, 2), substr($starttime, 6, 2), substr($starttime, 0, 4)));
+              
+              //Die Endzeit bei Ganztägigen ist immer der darauffolgende Tag
+              $endtime = $endtime-1;
+              
               $endtimeAnzeige = date('D, j. F Y', mktime(0, 0, 0, substr($endtime, 4, 2), substr($endtime, 6, 2), substr($endtime, 0, 4)));
             } else { //Ereignis mit Start- und Endzeit
               $starttimeAnzeige = date('D, j. F Y - H:i', mktime(substr($starttime, 9, 2), substr($starttime, 11, 2), substr($starttime, 13, 2), substr($starttime, 4, 2), substr($starttime, 6, 2), substr($starttime, 0, 4)));
@@ -110,7 +112,8 @@
                                'Startzeit' => $starttimeAnzeige, 
                                'Endzeit' => $endtimeAnzeige,
                                'Beschreibung' => $description, 
-                               'Ort' => $location);
+                               'Ort' => $location,
+                               'Ganztaegig' => $wholeday);
             
 
             
@@ -130,13 +133,14 @@
         return;
       }
       
-      //Sortiere Termine aufsteingend nach Startzeit
+      //Sortiere Termine aufsteigend nach Startzeit
       foreach ($termine as $nr => $inhalt) {
         $start[$nr] = strtolower( $inhalt['Timestamp'] );
         $startA[$nr]  = strtolower( $inhalt['Startzeit'] );
         $endA[$nr]   = strtolower( $inhalt['Endzeit'] );
         $desc[$nr] = strtolower( $inhalt['Beschreibung'] );
         $loc[$nr] = strtolower( $inhalt['Ort'] );
+        $ganztae[$nr] = strtolower( $inhalt['Ganztaegig'] );
       }    
       array_multisort($start, SORT_ASC, $termine);
             
@@ -155,6 +159,12 @@
         echo "<div class=\"well well-sm\">";
           echo $termine[$i]['Beschreibung']." ";
           echo $termine[$i]['Startzeit'];
+          
+          //Zeige Enddatum bei mehrtägigem Ereignis an
+          if($termine[$i]['Ganztaegig'] == 1 && ($termine[$i]['Startzeit'] != $termine[$i]['Endzeit'])) {
+            echo " - ".$termine[$i]['Endzeit'];    
+          }
+          
           echo "<br/>";
           echo "Ort: ".$termine[$i]['Ort'];
           echo "<br/>";
