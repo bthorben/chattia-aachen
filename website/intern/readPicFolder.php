@@ -32,14 +32,14 @@
       $string = explode('.', $bildinfo['basename']); 
       $endung = $string[count($string)-1];
       
-      if (!file_exists('img/_thumbnail/'.$b)) {
-        mkdir('img/_thumbnail/'.$b, 0777, true);
+      if (!file_exists('img/_thumbnail/'.basename($ordner))) {
+        mkdir('img/_thumbnail/'.basename($ordner), 0777, true);
       }
       
       if($endung == "JPG" || $endung == "PNG") {
-        make_thumbnail($bildinfo['dirname']."/".$bildinfo['basename'], "img/_thumbnail/".$b."/".$bildinfo['basename']);
+        make_thumbnail($bildinfo['dirname']."/".$bildinfo['basename'], "img/_thumbnail/".basename($ordner)."/".$bildinfo['basename']);
         
-        $thumbnailpath = "img/_thumbnail/".$b."/".$bildinfo['basename'];
+        $thumbnailpath = "img/_thumbnail/".basename($ordner)."/".$bildinfo['basename'];
         $picpath = $bildinfo['dirname']."/".$bildinfo['basename'];
         
         $picname = $bildinfo['basename'];
