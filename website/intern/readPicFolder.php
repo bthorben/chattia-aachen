@@ -31,10 +31,15 @@
       $bildinfo = pathinfo($ordner."/".$bild);
       $string = explode('.', $bildinfo['basename']); 
       $endung = $string[count($string)-1];
+      
+      if (!file_exists('img/_thumbnail/'.$b)) {
+        mkdir('img/_thumbnail/'.$b, 0777, true);
+      }
+      
       if($endung == "JPG" || $endung == "PNG") {
-        make_thumbnail($bildinfo['dirname']."/".$bildinfo['basename'], "img/_thumbnail/".$bildinfo['basename']);
+        make_thumbnail($bildinfo['dirname']."/".$bildinfo['basename'], "img/_thumbnail/".$b."/".$bildinfo['basename']);
         
-        $thumbnailpath = "img/_thumbnail/".$bildinfo['basename'];
+        $thumbnailpath = "img/_thumbnail/".$b."/".$bildinfo['basename'];
         $picpath = $bildinfo['dirname']."/".$bildinfo['basename'];
         
         $picname = $bildinfo['basename'];

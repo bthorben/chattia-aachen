@@ -88,9 +88,6 @@
                     
           if($endtime > $convertedDate) {
 
-            
-            
-            
             if($wholeday == 1) { //Ganztägiges Ereignis
               $starttimeAnzeige = date('D, j. F Y', mktime(0, 0, 0, substr($starttime, 4, 2), substr($starttime, 6, 2), substr($starttime, 0, 4)));
               
