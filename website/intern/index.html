@@ -66,8 +66,8 @@
           <div class="col-md-12 col-centered">
           <h1>Neues aus der Chattia</h1>
           <p class="text-justify">
+           <?php showNews("files/Weinkneipe 2015.txt"); ?>
            <?php showNews("files/Ankneipe WiSe 15.txt"); ?>
-           <?php showNews("files/Rede von Bbr Kulpinski zur Ankneipe.txt"); ?>
            <?php showNews("files/Semesterbericht SoSe 15.txt"); ?>
            <?php showNews("files/Ankneipe SoSe 15.txt"); ?>
            <?php showNews("files/Operation Polystyrol.txt"); ?>
@@ -88,6 +88,8 @@
           <h1>Galerie</h1>
           <p>
           
+          <?php readPicFolder("img/Weinkneipe 2015"); ?>
+          <?php readPicFolder("img/Bundesfahrt aus Berlin WS 2015"); ?>
           <?php readPicFolder("img/Ankneipe WiSe 15"); ?>
           <?php readPicFolder("img/Wartburgfest 2015"); ?>
           <?php readPicFolder("img/Ankneipe SoSe 15"); ?>
