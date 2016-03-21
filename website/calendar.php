@@ -79,12 +79,11 @@
 
               continue;
             }
-            /*
             if(preg_match("/^DESCRIPTION:/", $line)) { //Gibt Fließtext der Veranstaltung zurück
               $text = substr($line, 12);
 
               continue;
-            }*/
+            }
             
             if(preg_match("/^RRULE:/", $line)) { //Serientermine
               $rrule_freq = substr($line, 11);
@@ -297,7 +296,7 @@
           echo "Ort: ".$termine[$i]['Ort'];
           echo "<br/>";
           
-          echo $termine[$i]['Text'];
+          //echo $termine[$i]['Text'];
           
         echo "</div>";
       }

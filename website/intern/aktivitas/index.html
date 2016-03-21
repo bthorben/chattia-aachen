@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../main.css" rel="stylesheet">
     <script src="../../main.js"></script>
+    
+    <?php include_once("readDownload.php"); ?>
+    
     <title>Wingolfsverbindung Chattia zu Aachen</title>
   </head>
   <body>
@@ -47,67 +50,13 @@
       </div>
       <div class="row">
       <h1>Downloadbereich</h1>
-        <div class="col-md-4">
-          
-	        <p>
-            <h4>Aktuelles</h4>
-            <li><a href="/assets/SemesterprogrammWS1516.pdf">Semesterprogramm WS 15/16</a></li>
-            <li><a href="files/SemesterprogrammWS1516.ics">Semesterprogramm WS 15/16 als Kalender</a></li>
-          </p>
-       
- <p>
-        <h4>Protokolle</h4>
-        <li><a href="files/protokolle/SS15_Semesterabkonvent.pdf">Abkonvent SS 15</a></li>
-        <li><a href="files/protokolle/SS15_Zwischenkonvent.pdf">Zwischenkonvent SS 15</a></li>
-        <li><a href="files/protokolle/SS15_Wartburgkonvent.pdf">Wartburgkonvent SS 15</a></li>
-        <li><a href="files/protokolle/SS15_Semesterankonvent.pdf">Ankonvent SS 15</a></li>
-      </p>      
-      
-      <p>
-        <h4>Archiv</h4>
-        <li><a href="files/Einladungen-Stiftungsfest-2015.pdf">Einladungen zum  63. Stiftungsfest</a></li>
-        <li><a href="files/SemesterprogrammSS15.pdf">Semesterprogramm SS 15</a></li>
-        <li><a href="files/SemesterprogrammSS15.ics">Semesterprogramm SS 15 als Kalender</a></li>
-      </p>
 
-        </div>
-        <div class="col-md-4">
-         <p>
-          <h4>Geschichte und Infomaterial</h4>
-          <li><a href="files/Geschichte-Wingolf-und-Chattia.pdf">Geschichte Wingolf und Chattia</a></li>
-            
-            <li><a href="files/Allgemeine-Wingolfsgeschichte-bis-1918.doc">Allgemeine Wingolfsgeschichte bis 1918</a></li>
-            <li><a href="files/Allgemeine-Wingolfsgeschichte-1919-bis-heute.doc">Allgemeine Wingolfsgeschichte 1919 bis heute</a></li>
-            <li><a href="files/Allgemein-Satzung-und-Kneipverhalten.doc">Allgemeines zur Satzung und Kneipverhalten</a></li>
-            <li><a href="files/ernstefeier-info.pdf">Infos zum Halten einer Ernsten Feier</a></li>
-            
-         </p>
-      
-      <p>
-        <h4>Allgemeines</h4>
-        <li><a href="files/Satzung2009.pdf">Satzung</a></li>
-        <li><a href="files/Comment.docx">Comment</a></li>
-      </p>
-        </div>
-        
-        <div class="col-md-4">
-                <p>
-        <h4>Vorlagen</h4>
-        <li><a href="files/ProtokollVorlage.docx">Vorlage Protokoll</a></li>
-        <li><a href="files/KassenbuchVorlage.xls">Vorlage Kassenbuch</a></li>
-        <li><a href="files/AdresslisteVerbindungen.xlsx">Adressen Wingolfs und Aachener Verbindungen</a></li>
-      </p>
-      
-      <p>
-        <h4>Bilder</h4>
-        <li><a href="files/Wappen.bmp">Wappen</a></li>
-        <li><a href="files/Zirkel.jpg">Zirkel</a></li>
-        
-        <li><a href="files/ChattiaWappen.jpg">Richtiges Wappen</a></li>
-        <li><a href="files/ChattiaWappenScan.jpg">Richtiges Wappen (unbearbeitet)</a></li>
-      </p>
-        </div>
+      <?php $readDownload = new ReadDownload(); $readDownload->read("files"); ?>
       </div>
+      
+      <div class="row">
+      </div>
+
     </div>
     <footer role="contentinfo">
         <div class="container">

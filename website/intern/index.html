@@ -66,18 +66,9 @@
           <div class="col-md-12 col-centered">
           <h1>Neues aus der Chattia</h1>
           <p class="text-justify">
-           <?php showNews("files/Weinkneipe 2015.txt"); ?>
-           <?php showNews("files/Ankneipe WiSe 15.txt"); ?>
-           <?php showNews("files/Semesterbericht SoSe 15.txt"); ?>
-           <?php showNews("files/Ankneipe SoSe 15.txt"); ?>
-           <?php showNews("files/Operation Polystyrol.txt"); ?>
-           <?php showNews("files/74. Wingolfsseminar.txt"); ?>
-           <?php showNews("files/Fuxenvorstellung Dennis.txt"); ?>
-           <?php showNews("files/Semesterbericht WiSe 14 15.txt"); ?>
-           <?php showNews("files/Fuxenvorstellung Simon.txt"); ?>
-           <?php showNews("files/Fuxenvorstellung Fabian.txt"); ?>
-           <?php showNews("files/Fuxenvorstellung Patrick.txt"); ?>
-           <?php showNews("files/Chattia zu Aachen im eigenen Haus.txt"); ?>
+          
+          <?php $readNews = new ReadNews(); $readNews->read("files/berichte"); ?>
+          
           </p>
         </div>
         </div>
@@ -88,13 +79,8 @@
           <h1>Galerie</h1>
           <p>
           
-          <?php readPicFolder("img/Weinkneipe 2015"); ?>
-          <?php readPicFolder("img/Bundesfahrt aus Berlin WS 2015"); ?>
-          <?php readPicFolder("img/Ankneipe WiSe 15"); ?>
-          <?php readPicFolder("img/Wartburgfest 2015"); ?>
-          <?php readPicFolder("img/Ankneipe SoSe 15"); ?>
-          <?php readPicFolder("img/Hausbautag"); ?>
-        
+          <?php $readPics = new ReadPicFolder(); $readPics->read("img"); ?>
+                  
         
         <!-- Skript muss einmal eingebunden werden, damit Bildergalerie gestartet wird -->       
         <script>

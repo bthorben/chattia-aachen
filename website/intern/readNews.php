@@ -1,6 +1,6 @@
 <?php
 
-$a=0;
+include_once("readFolder.php");
 
 function inputThumbnailText($filepath) {
   $news = fopen($filepath, "r");
@@ -35,10 +35,14 @@ function inputWholeText($filepath) {
   fclose($news);
 }
 
-function showNews($filepath) {
+class ReadNews extends ReadFolder {
+
+public $a=0;
+
+function readContent($filepath) {
   global $a;
   $header = basename($filepath);
-  $header = substr($header, 0, -4);
+  $header = substr($header, 11, -4);
   
   echo "<div class=\"row beige\">
         <a name=\"".$header."\"></a>
@@ -55,6 +59,7 @@ function showNews($filepath) {
       </div>";
       
   $a++;
+}
 }
         
         

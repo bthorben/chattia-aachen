@@ -1,14 +1,20 @@
 <?php
   include_once("thumbnail.php");
+  include_once("readFolder.php");
   
-  $b = 0;
-
-  function readPicFolder($folderpath) {
+  class ReadPicFolder extends ReadFolder {
+  
+  public $b = 0;
+  
+  function readContent($folderpath) {
     global $b;
     $ordner = $folderpath;
     
+    $title = basename($ordner);
+    $title = substr($title, 11);
+    
     echo "<div class=\"row tan\">";    
-    echo "<h2>".basename($ordner)."</h2>";
+    echo "<h2>".$title."</h2>";
     
     //Check if Path is a Folder
     if(!is_dir($ordner)) {
@@ -53,5 +59,7 @@
     closedir($dh);
     $b++;
   }
+  
+}
     
 ?>
