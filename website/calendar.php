@@ -189,16 +189,18 @@
               if(empty($rrule_until)) { //Count gegeben
                 for($i = 1; $i < $rrule_count; $i++) {
                   $termine[] = array('Startzeit' => (strtotime($starttime)+$rrule_interval*$i*24*3600),
-                               'Endzeit' => $endtimeAnzeige,
+                               'Endzeit' => (strtotime($endtime)+$rrule_interval*$i*24*3600),
                                'Beschreibung' => $description, 
+                               'Text' => $text, 
                                'Ort' => $location,
                                'Ganztaegig' => $wholeday);    
                 }
               } else { //Until gegeben
                 for($i = 1; (strtotime($starttime)+$rrule_interval*$i*24*3600) < (strtotime($until)); $i++) {
                   $termine[] = array('Startzeit' => (strtotime($starttime)+$rrule_interval*$i*24*3600),
-                                'Endzeit' => $endtimeAnzeige,
+                                'Endzeit' => (strtotime($endtime)+$rrule_interval*$i*24*3600),
                                 'Beschreibung' => $description, 
+                                'Text' => $text, 
                                 'Ort' => $location,
                                 'Ganztaegig' => $wholeday); 
                 } 
@@ -209,16 +211,18 @@
               if(empty($rrule_until)) { //Count gegeben
                 for($i = 1; $i < $rrule_count; $i++) {
                   $termine[] = array('Startzeit' => (strtotime($starttime)+$rrule_interval*$i*7*24*3600),
-                               'Endzeit' => $endtimeAnzeige,
+                               'Endzeit' => (strtotime($endtime)+$rrule_interval*$i*7*24*3600),
                                'Beschreibung' => $description, 
+                               'Text' => $text, 
                                'Ort' => $location,
                                'Ganztaegig' => $wholeday);    
                 }
               } else { //Until gegeben
                 for($i = 1; (strtotime($starttime)+$rrule_interval*$i*7*24*3600) < (strtotime($until)); $i++) {
                   $termine[] = array('Startzeit' => (strtotime($starttime)+$rrule_interval*$i*7*24*3600),
-                                'Endzeit' => $endtimeAnzeige,
-                                'Beschreibung' => $description, 
+                                'Endzeit' => (strtotime($endtime)+$rrule_interval*$i*7*24*3600),
+                                'Beschreibung' => $description,
+                                'Text' => $text,  
                                 'Ort' => $location,
                                 'Ganztaegig' => $wholeday); 
                 } 
