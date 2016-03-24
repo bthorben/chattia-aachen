@@ -259,6 +259,7 @@
       array_multisort($start, SORT_ASC, $termine);
             
       for($i = 0; $i < $count && $i < count($termine); $i++) {
+        
         /*
         echo $termine[$i]['Beschreibung'];
         echo "<br/>";

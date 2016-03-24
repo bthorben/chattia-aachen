@@ -1,1 +1,2 @@
-AddType application/x-httpd-php php php4 php3 html htm
+Action application/x-httpd-php70 /cgi-sys/php70-fcgi-starter.fcgi
+AddType application/x-httpd-php70 php php70 html htm
