@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /files/
+Disallow: /fonts/
+Disallow: /intern/
+Disallow: /usr/
