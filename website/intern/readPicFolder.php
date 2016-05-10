@@ -39,10 +39,10 @@
       $endung = $string[count($string)-1];
       
       if (!file_exists('img/_thumbnail/'.basename($ordner))) {
-        mkdir('img/_thumbnail/'.basename($ordner), 0777, true);
+        mkdir('img/_thumbnail/'.basename($ordner), 0775, true);
       }
       
-      if($endung == "JPG" || $endung == "PNG") {
+      if(strcasecmp($endung, "jpg") == 0 || strcasecmp($endung, "PNG") == 0) {
         make_thumbnail($bildinfo['dirname']."/".$bildinfo['basename'], "img/_thumbnail/".basename($ordner)."/".$bildinfo['basename']);
         
         $thumbnailpath = "img/_thumbnail/".basename($ordner)."/".$bildinfo['basename'];

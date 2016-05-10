@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../main.css" rel="stylesheet">
+    <script src="../../main.js"></script>
+    
+    <?php include_once("../readDownload.php"); ?>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+    
+    <title>Wingolfsverbindung Chattia zu Aachen</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html"><i class="fa fa-home"></i> Chattia zu Aachen</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../../index.html#geschichte">Geschichte</a></li>
+            <li><a href="../../index.html#prinzipien">Prinzipien</a></li>
+            <li><a href="../../index.html#chattenheim">Chattenheim</a></li>
+            <li><a href="../../index.html#kontakt">Kontakt</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interner Bereich<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="../index.html#news">News</a></li>
+                <li><a href="../index.html#galerie">Galerie</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="../aktivitas/index.html#">Aktivenbereich</a></li>
+                <li><a href="#">Philisterbereich</a></li>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+      <div class="jumbotron chattia">
+        <h1 class="chattia-headline">Chattia zu Aachen</h1>
+        <p>Philisterbereich</p>
+      </div>
+      <div class="row">
+      <h1>Downloadbereich</h1>
+
+      <?php $readDownload = new ReadDownload(); $readDownload->read("files"); ?>
+      </div>
+      
+      <div class="row">
+      </div>
+
+    </div>
+    <footer role="contentinfo">
+        <div class="container">
+          Copyright Chattia zu Aachen. <br>
+          Design, Layout und Funktionen Johannes Kästle, Steffen Bochenek und Thorben Bochenek.<br>
+          Unter Verwendung von Bootstrap, Grunt, Bower und mit einem Bild von Matthias Ripp.
+        </div>
+      </footer>
+  </body>
+</html>
