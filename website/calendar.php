@@ -74,8 +74,8 @@
 
               continue;
             }
-            if(preg_match("/^SUMMARY;/", $line)) { //Gibt Beschreibung der Veranstaltung zurück
-              $description = substr($line, 20);
+            if(preg_match("/^SUMMARY;/", $line) || preg_match("/^SUMMARY:/", $line)) { //Gibt Beschreibung der Veranstaltung zurück
+              $description = substr($line, (strpos($line, ':') + 1));
 
               continue;
             }
@@ -239,14 +239,7 @@
         }
       }
       fclose($calendar); 
-      
-      if(empty($termine)){
-        echo "Es sind keine austehenden Termine bekannt";
-        echo "<br/>";
-        echo "<br/>";
-        return;
-      }
-      
+            
       //Sortiere Termine aufsteigend nach Startzeit
       foreach ($termine as $nr => $inhalt) {
         $start[$nr] = strtolower( $inhalt['Startzeit'] );
@@ -257,8 +250,40 @@
         $ganztae[$nr] = strtolower( $inhalt['Ganztaegig'] );
       }    
       array_multisort($start, SORT_ASC, $termine);
-            
+      
+      //Lösche vergangene Serientermine
+      for($i = 0; $i < count($termine); $i++) {
+        if(date('Ymd', $termine[$i]['Endzeit'])+1 < $convertedDate) {
+          array_shift($termine);  
+          $i--;
+        }      
+
+      }
+      
+      if(empty($termine)){
+        echo "Es sind keine austehenden Termine bekannt";
+        echo "<br/>";
+        echo "<br/>";
+        return;
+      }
+      
+
       for($i = 0; $i < $count && $i < count($termine); $i++) {
+	      
+	      //var_dump( $termine);
+	      
+	      /*
+	      if(count($termine) > 0) {
+	        while(date('Ymd', $termine[$i]['Endzeit'])+1 < $convertedDate) {
+	          if(count($termine) > 0) {
+	            array_shift($termine); 
+	          } else {
+	            break;
+	          }
+	          
+	        }
+	      }
+	      */
         
         /*
         echo $termine[$i]['Beschreibung'];
@@ -300,6 +325,7 @@
           echo "<br/>";
           echo "Ort: ".$termine[$i]['Ort'];
           echo "<br/>";
+
           
           //echo $termine[$i]['Text'];
           

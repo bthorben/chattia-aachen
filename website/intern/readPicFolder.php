@@ -39,7 +39,7 @@
       $endung = $string[count($string)-1];
       
       if (!file_exists('img/_thumbnail/'.basename($ordner))) {
-        mkdir('img/_thumbnail/'.basename($ordner), 0775, true);
+        mkdir('img/_thumbnail/'.basename($ordner), 0777, true);
       }
       
       if(strcasecmp($endung, "jpg") == 0 || strcasecmp($endung, "PNG") == 0) {

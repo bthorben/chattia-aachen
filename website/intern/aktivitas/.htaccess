@@ -11,4 +11,4 @@ AuthUserFile /usr/www/users/wingoc/usr/.htpasswd
 AuthGroupFile /dev/null
 
 order deny,allow
-require user Aktivitas
+require user Aktivitas admin

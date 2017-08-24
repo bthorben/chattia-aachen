@@ -13,7 +13,6 @@
 function make_thumbnail ($_pic_src, $_im_ziel, $_br = 150,
                          $_ho = 150, $_qual = 75)
     {
-    
     if(file_exists($_im_ziel)) {
       return false; 
     }
@@ -47,7 +46,6 @@ function make_thumbnail ($_pic_src, $_im_ziel, $_br = 150,
                 $_y_hoehe = $_x_breite;
                 $_y_verschiebung = ($_pic_src_y - $_x_breite) / 2;
                 }
-
             @imagecopyresized($_im_dst,$_im_src,0,0,$_x_verschiebung,
                 $_y_verschiebung,$_br,$_ho,$_x_breite,$_y_hoehe);
             @imagerectangle( $_im_dst, 0, 0, $_br-1, $_ho-1, 0 );

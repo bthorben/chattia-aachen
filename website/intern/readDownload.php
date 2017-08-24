@@ -28,7 +28,8 @@ class ReadDownload extends ReadFolder {
       $this->read($folder);
     } else { //Datei     
     
-      $name = strstr($name , '.', true);
+      //$name = strstr($name , '.', true);
+      $name = str_replace(substr($name, strrpos($name, '.')), "", $name);
       echo "<li><a href=\"".$folder."\">".$name."</a></li>";
     }
   }
